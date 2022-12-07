@@ -1,0 +1,19 @@
+class Solution {
+    fun solution(babbling: Array<String>): Int {
+        var answer: Int = 0 //머쓱이의 조카가 발음 할 수 있는 단어의 수
+        val list = arrayListOf("aya", "ye", "woo", "ma") //단어 : aya, ye, woo, ma
+        babbling.forEach { //리스트형식에 데이터 개수만큼 반복 실행
+            var temp = it // it == temp == babbling
+            for(i in 0..list.size - 1) {
+            	//반복문을 사용하여 단어의 수를 감소 시킨다
+                temp = temp.replace(list[i], "0")
+                //babbling의 리스트를 변경
+            }
+            if(temp.replace("0","") == "") {
+                answer++
+                //단어의 수가 존재하다면 증가
+            }
+        }
+        return answer
+    }
+}
