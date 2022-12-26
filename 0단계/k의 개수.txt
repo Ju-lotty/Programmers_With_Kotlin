@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(i: Int, j: Int, k: Int): Int {
+        var answer: Int = 0
+        for (i in i..j) {
+            for (l in i.toString()) {
+                if (l.toString() == k.toString()) {
+                    answer++
+                }
+            }
+        }        
+        return answer
+    }
+}
