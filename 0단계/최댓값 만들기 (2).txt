@@ -1,0 +1,7 @@
+import kotlin.math.max
+class Solution {
+    fun solution(numbers: IntArray): Int {
+        var answer = numbers.sorted()
+        return max(answer[0] * answer[1], answer[answer.lastIndex] * answer[answer.lastIndex - 1])
+    }
+}
