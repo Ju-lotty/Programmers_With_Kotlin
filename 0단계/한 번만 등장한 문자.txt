@@ -1,0 +1,11 @@
+class Solution {
+    fun solution(s: String): String {
+        var answer = ""
+        for(i in s){
+            if(s.count {n -> n == i} == 1) {
+                answer += i
+            }
+        }
+        return answer.split("").sorted().joinToString("")
+    }
+}
