@@ -1,0 +1,8 @@
+class Solution {
+    // 조건에 따라 연산 - map
+    // 정수형 배열을 낮은 순으로 배열한 후 뒤집는다. - sorted().reversed()
+    // [3, 76, 24] → [3, 24, 76] → [76, 24, 3]
+    // 특정 값 추출 - indexOf
+    // emergency에 모든 Index에 1을 더한다. [76, 24, 3] → [1, 2, 3] - indexOf(it) + 1
+    fun solution(emergency: IntArray) = emergency.map { emergency.sorted().reversed().indexOf(it) + 1 }
+}
