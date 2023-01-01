@@ -1,0 +1,13 @@
+class Solution {
+    fun solution(price: Int, money: Int, count: Int): Long {
+        var answer: Long = 0
+        var calcul: Long = 0
+        for(i in 1..count) {
+            calcul += price * i
+            if(calcul > money) {
+                answer = calcul - money
+            }
+        }
+        return answer
+    }
+}
