@@ -1,0 +1,11 @@
+class Solution {
+    fun solution(a: IntArray, b: IntArray): Int {
+        var answer = 0
+        if(a.size == b.size) {
+            for(i in a.indices) {
+                answer += (a[i] * b[i])
+            }
+        }
+        return answer
+    }
+}
