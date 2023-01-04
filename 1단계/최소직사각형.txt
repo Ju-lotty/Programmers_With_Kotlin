@@ -1,0 +1,3 @@
+class Solution {
+    fun solution(sizes: Array<IntArray>) = sizes.maxOf { maxOf(it[0],it[1]) } * sizes.maxOf { minOf(it[0],it[1]) }
+}
