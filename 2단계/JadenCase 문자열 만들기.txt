@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(s: String): String {
+        var answer = s.lowercase().split(' ').toTypedArray()
+        for(i in answer.indices) {
+            answer[i] = answer[i].capitalize()
+        }
+	    return answer.joinToString(" ")
+    }
+}
